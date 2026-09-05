@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Block Blast 17</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">🧩</div>
+
+      <div>
+        <h1>BLOCK BLAST <span>17</span></h1>
+        <p>Susun blok • Hancurkan garis • Raih skor tertinggi!</p>
+      </div>
+    </header>
+
+
+    <!-- SCORE -->
+    <section class="score-container">
+
+      <div class="score-card">
+        <span>SKOR</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="score-card high-score">
+        <span>HIGH SCORE</span>
+        <strong id="highScore">0</strong>
+      </div>
+
+    </section>
+
+
+    <!-- COMBO -->
+    <div id="comboText" class="combo-text"></div>
+
+
+    <!-- GAME BOARD -->
+    <section class="board-wrapper">
+      <div id="gameBoard"></div>
+    </section>
+
+
+    <!-- BLOCK -->
+    <section class="blocks-section">
+
+      <h2>Pilih Puzzle</h2>
+      <p id="instruction">Pilih blok lalu tekan papan permainan</p>
+
+      <div id="blocksContainer"></div>
+
+    </section>
+
+
+    <!-- BUTTON -->
+    <button id="restartBtn" class="restart-btn">
+      ↻ Mulai Ulang
+    </button>
+
+
+    <!-- LEADERBOARD -->
+    <section class="leaderboard">
+
+      <h2>🏆 Leaderboard</h2>
+
+      <div class="leaderboard-input">
+
+        <input
+          type="text"
+          id="playerName"
+          maxlength="15"
+          placeholder="Nama pemain"
+        >
+
+        <button id="saveScoreBtn">
+          Simpan Skor
+        </button>
+
+      </div>
+
+      <ol id="leaderboardList">
+        <li>Leaderboard belum tersedia</li>
+      </ol>
+
+    </section>
+
+  </main>
+
+
+  <!-- GAME OVER MODAL -->
+  <div id="gameOverModal" class="modal hidden">
+
+    <div class="modal-content">
+
+      <div class="gameover-icon">🎮</div>
+
+      <h2>GAME OVER!</h2>
+
+      <p>Skor kamu</p>
+
+      <div id="finalScore" class="final-score">0</div>
+
+      <p class="modal-info">
+        Tidak ada lagi puzzle yang bisa dipasang.
+      </p>
+
+      <button id="playAgainBtn">
+        Main Lagi
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+
+  <script src="game.js"></script>
+
+</body>
+</html>
